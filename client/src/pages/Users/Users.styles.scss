@@ -1,0 +1,60 @@
+.edit_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 50px 50px 80px ;
+    .form__title_row{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        .form_action_buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 15%;
+            margin-right: 5%;
+            .icon_button_delite,.icon_button_save{
+                padding: 5px 15px 5px 15px;
+                font-weight: bold;
+                border-radius: 5px;
+                border-style: none;
+                svg{
+                    height: 1.5rem;
+                    width: auto;
+                }
+                &:hover{
+                    background-color: aquamarine;
+                }
+            }
+            .icon_button_delite{
+                background-color: rgb(117, 9, 9);
+                color: white;
+            }
+        }
+    }
+    .form_label{
+        margin: 10px 0px 10px 0px;
+    }
+    .form_input{
+        width: 80%;
+        height: 50px;
+        padding-left: 10px;
+        font-size: 1rem
+    }
+    .form_select{
+        width: 80%;
+        height: fit-content;
+        font-size: 1rem
+    }
+    .errmsg{
+        border: 4px rgb(145, 20, 20) solid;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 20px;
+        font-weight: bold;
+        background-color: rgb(247, 224, 247);
+        color: rgb(145, 20, 20);
+    }
+}

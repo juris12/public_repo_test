@@ -1,0 +1,49 @@
+.navbar{
+    justify-content: flex-end;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    ul{
+        justify-content: flex-end;
+        list-style: none;
+        li{
+            padding: 5px 5%;
+            &:hover{
+                background-color: rgb(142, 201, 201);
+                border-radius: 40px;
+                color: #fff;
+                cursor: pointer;
+            }
+            
+        }
+        .nav_profile{
+            img{
+                border-radius: 50%;
+                margin-right: 10px;
+                height: 2rem;
+                width: auto;
+            }
+
+        }
+    }
+
+}
+.menu{
+    position: fixed;
+    left: 1%;
+    top: 0px;
+    margin-top: 5px;
+    z-index: 40000;
+    max-height: 52px;
+    padding: 10px;
+    border-radius: 50%;
+    svg{
+        height: 2rem;
+        width: auto;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}

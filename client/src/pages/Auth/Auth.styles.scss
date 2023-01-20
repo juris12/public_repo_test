@@ -1,0 +1,117 @@
+.postpost_outer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.inerlogin{
+    background-color: rgb(206, 233, 233);
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    h2{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+.inerlogin_errmesage{
+    min-height: 15px;
+    line-height: 30px;
+    color: rgb(185, 0, 0);
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+}
+.login_input{
+    border: rgb(179, 179, 179) solid 2px;
+    border-radius: 10px;
+    padding: 7px;
+    height: 25px;
+    margin-bottom: 25px;
+}
+.login_lower_iner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    label{
+        line-height: 20px;
+        margin-left: 4px;
+    }
+    input{
+        display: block;
+    }
+}
+.login_submit{
+    height: 40px;
+    width: 70%;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.login_submit[disabled]{
+    background-color: rgba(0, 128, 128, 0.5);
+}
+.login_signup{
+    text-align: center;
+}
+.login_lower{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+
+
+.specialclass{
+    display: flex;
+    justify-content: center;
+}
+.offscreen{
+    position: absolute;
+    left: -9999px;
+}
+.hide{
+    display: none;
+}
+.inerlogin .errmsg{
+    margin: 7px 0px 7px 0px;
+    background-color: rgba(160, 0, 0, 0.1);
+    padding: 7px;
+    border-radius: 10px;
+    color: rgb(161, 0, 0);
+    border: 3px rgb(161, 0, 0) solid;
+    font-size: 0.9rem;
+}
+.error_input{
+    color: rgb(161, 0, 0);
+    border: 3px rgb(161, 0, 0) solid;
+}
+.normal_input{
+    border: rgb(179, 179, 179) solid 2px;
+}
+.normal_input,.error_input{
+    border-radius: 10px;
+    padding: 15px;
+    height: 23px;
+    margin: 10px 0px 7px 0px;
+    font-size: 0.9rem;
+}
+.inerlogin form{
+    display: flex;
+    flex-direction: column;
+    .instructions{
+        margin: 7px 0px 7px 0px;
+        background-color: rgba(0, 128, 128, 0.1);
+        padding: 7px;
+        border-radius: 10px;
+        border: 3px teal solid;
+        font-size: 0.9rem;
+    }
+}

@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const db =  require('./config/dbConfig')
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const corsOptions = require('./config/corsOptions');
@@ -14,9 +13,6 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors(corsOptions));
 
-app.get('/',(req,res) => {
-    res.send('afdfa')
-})
 
 app.use('/users', require('./routes/userRoutes'))
 app.use('/auth', require('./routes/authRoutes'))

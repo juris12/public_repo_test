@@ -1,6 +1,5 @@
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { useGetUsersByUserIdQuery } from '../../pages/Users/usersApiSlice'
 import { BiLogIn } from 'react-icons/bi'
 import { useSelector } from "react-redux"
 import './navbar.styles.scss'

@@ -1,14 +1,10 @@
 import  { useEffect, useState, useRef} from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import regex from '../../other/regex';
-import { setCredentials, setUser } from './authSlice'
+import { setCredentials } from './authSlice'
 import './Auth.styles.scss'
-import Axios  from '../../other/axios'
 import { useDispatch } from 'react-redux'
 import { useLoginMutation } from './authApiSlice'
-const LOGIN_URL = '/auth'; 
-
-//!Aa12afasf janis123@inbox.lv janis
 
 const Loginpage=() => {
 
@@ -17,8 +13,6 @@ const Loginpage=() => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch()
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
     
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
@@ -39,7 +33,7 @@ const Loginpage=() => {
             setErrMsg("Nepareizs pieteikums!");
         }
         if(true){
-          body_obj = { user_name: 'jangfbis' ,user_password: 'Aaf12afasf'}
+          body_obj = { user_name: user ,user_password: pwd}
         }else{
           body_obj = { user_email: user ,user_password: pwd}
         }
@@ -48,12 +42,6 @@ const Loginpage=() => {
             dispatch(setCredentials({ accessToken: object?.accessToken, role: object?.role, id:object?.id }))
             setUser('')
             setPwd('')
-            try{
-              const { data } = await Axios.get('/users/1')
-              dispatch(setUser({user_name: data[0].user_name}))
-            }catch(err){
-              console.log(JSON.stringify(err))
-            }
             navigate('/admin')
         } catch (err) {
             if (!err.status) {
@@ -68,11 +56,11 @@ const Loginpage=() => {
             errRef.current.focus();
         }
     }
+    if(isLoading) return (<h2>Loading...</h2>)
     return (
     <section className='postpost_outer'>
       <div className='inerlogin'>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscrean"} aria-live="assertive">{errMsg}</p>
-      <p>jangfbis Aaf12afasf</p>
       <h2>Ienāc</h2>
       <form className='mazs' onSubmit={submitfunc}>
         <label htmlFor="username" className='offscreen'>
